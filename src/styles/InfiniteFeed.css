@@ -1,0 +1,24 @@
+.descriptionBlock {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.featuresList {
+    width: fit-content;
+    justify-self: center;
+}
+
+.featureItem {
+    list-style: none;
+    justify-items: left;
+    background-color: lightyellow;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.loadingIndicator {
+    padding: 20px;
+    text-align: center;
+}

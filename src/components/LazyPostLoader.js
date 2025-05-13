@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
 import { Post } from './Post';
+import  '../styles/LazyPostLoader.css';
 
-// Динамически импортируем "тяжелый" компонент
+// Динамически импортируем компонент с искусственной задержкой
 const LazyLoadedPost = React.lazy(() =>
     new Promise(resolve =>
         setTimeout(() => resolve({ default: Post }), 1000) // Имитируем задержку
@@ -10,7 +11,11 @@ const LazyLoadedPost = React.lazy(() =>
 
 export const LazyPostLoader = ({ post }) => {
     return (
-        <Suspense fallback={<div style={{ padding: '20px', background: '#f0f0f0' }}>Загрузка поста...</div>}>
+        <Suspense fallback={
+            <div className="loadingFallback">
+                Загрузка поста...
+            </div>
+        }>
             <LazyLoadedPost post={post} />
         </Suspense>
     );

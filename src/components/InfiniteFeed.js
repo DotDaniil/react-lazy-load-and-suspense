@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { generateMockPosts } from './utils';
 import { LazyPostLoader } from './LazyPostLoader';
+import '../styles/InfiniteFeed.css';
 
 export const InfiniteFeed = () => {
     const [posts, setPosts] = useState(generateMockPosts(5));
@@ -30,18 +31,13 @@ export const InfiniteFeed = () => {
 
     return (
         <div>
-            <div style={{
-                backgroundColor: '#f0f0f0',
-                padding: '20px',
-                borderRadius: '8px',
-                marginBottom: '20px'
-            }}>
+            <div className="descriptionBlock">
                 <h2>Как это работает?</h2>
                 <p>
                     Это демонстрация бесконечной ленты с ленивой загрузкой (lazy loading) и Suspense.
                 </p>
-                <div style={{width: 'fit-content', justifySelf: 'center'}}>
-                    <ul style={{ listStyle: 'none', justifyItems: 'left', backgroundColor: 'lightyellow', padding: '29px', borderRadius: '4px'}}>
+                <div className="featuresList">
+                    <ul className="featureItem">
                         <li><strong>React.lazy</strong> - динамически загружает компоненты постов при их появлении</li>
                         <li><strong>Suspense</strong> - показывает fallback-заглушку во время загрузки</li>
                         <li><strong>Intersection Observer (через scroll event)</strong> - определяет, когда пользователь прокрутил до конца</li>
@@ -55,7 +51,7 @@ export const InfiniteFeed = () => {
             {posts.map((post) => (
                 <LazyPostLoader key={post.id} post={post} />
             ))}
-            {loading && <div style={{ padding: '20px', textAlign: 'center' }}>Загрузка новых постов...</div>}
+            {loading && <div className="loadingIndicator">Загрузка новых постов...</div>}
         </div>
     );
 };
