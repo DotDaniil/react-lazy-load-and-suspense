@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-lazy-load-and-suspense/static/css/main.43111320.css",
+    "main.js": "/react-lazy-load-and-suspense/static/js/main.9b99e687.js",
+    "static/js/453.b3a29d33.chunk.js": "/react-lazy-load-and-suspense/static/js/453.b3a29d33.chunk.js",
+    "index.html": "/react-lazy-load-and-suspense/index.html",
+    "main.43111320.css.map": "/react-lazy-load-and-suspense/static/css/main.43111320.css.map",
+    "main.9b99e687.js.map": "/react-lazy-load-and-suspense/static/js/main.9b99e687.js.map",
+    "453.b3a29d33.chunk.js.map": "/react-lazy-load-and-suspense/static/js/453.b3a29d33.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43111320.css",
+    "static/js/main.9b99e687.js"
+  ]
+}
